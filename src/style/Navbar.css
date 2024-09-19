@@ -1,0 +1,22 @@
+/* Add this to your CSS file */
+.nav-item {
+    position: relative; /* Position relative to contain the absolute underline */
+    overflow: hidden; /* Ensure underline doesn't overflow */
+  }
+  
+  .nav-item::after {
+    content: ''; /* Create an empty pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width of the parent element */
+    height: 2px; /* Thickness of the underline */
+    background-color: #e82574; /* Color of the underline */
+    transform: translateX(-100%); /* Start the underline off-screen */
+    transition: transform 0.3s ease; /* Smooth transition for the underline */
+  }
+  
+  .nav-item:hover::after {
+    transform: translateX(0); /* Slide the underline in on hover */
+  }
+  

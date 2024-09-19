@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Map = (props) => {
+const Map = () => {
   return (
     <div className="w-full flex justify-center">
       <iframe

@@ -1,0 +1,57 @@
+/* Slide in from the left for the image */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Slide in from the right for text */
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animation classes for each element */
+  .animate-slide-in-left {
+    animation: slideInFromLeft 1.2s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInFromRight 1.2s ease-out forwards;
+  }
+  
+  .animate-slide-in-right-delay-1 {
+    animation: slideInFromRight 1.2s ease-out forwards;
+    animation-delay: 0.0s;
+  }
+  .animate-slide-in-right-delay-2 {
+    animation: slideInFromRight 1.2s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  .animate-slide-in-right-delay-3 {
+    animation: slideInFromRight 1.2s ease-out forwards;
+    animation-delay: 1s;
+  }
+  
+  .animate-slide-in-right-delay-4 {
+    animation: slideInFromRight 1.2s ease-out forwards;
+    animation-delay: 1.5s;
+  }
+  
+  .animate-slide-in-right-delay-5 {
+    animation: slideInFromRight 1.2s ease-out forwards;
+    animation-delay: 2s;
+  }
+  

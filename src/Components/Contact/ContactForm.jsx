@@ -79,7 +79,7 @@ const ContactForm = () => {
             <form className="lg:w-3/4 lg:ms-36">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-10">
                 {/* First Name */}
-                <div className="relative">a
+                <div className="relative">
                   <label
                     className={`absolute top-5 left-0 transform transition-all duration-300 ${
                       focusField === "firstName" || formData.firstName
