@@ -1,5 +1,5 @@
-import React from 'react'
-import BookBtn from '../Button/BookBtn'
+import React from "react";
+import BookBtn from "../Button/BookBtn";
 
 const BookBtnCard = () => {
   return (
@@ -8,7 +8,7 @@ const BookBtnCard = () => {
         <BookBtn />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default BookBtnCard
+export default BookBtnCard;

@@ -5,7 +5,7 @@ import {
   RiRestaurant2Fill,
 } from "react-icons/ri";
 import { MdOutlineMap } from "react-icons/md";
-import "../../style/ServiceCard.css"; // Ensure this path is correct
+import "../../style/ServiceCard.css";
 
 const Service = () => {
   const [animate, setAnimate] = useState(false);
@@ -41,7 +41,9 @@ const Service = () => {
       ref={serviceRef}
     >
       {/* Background Shapes */}
-      <div className={`absolute top-0 left-16 w-60 h-60 bg-pink-300 rounded-full opacity-30 animate-ping     ` }></div>
+      <div
+        className={`absolute top-0 left-16 w-60 h-60 bg-pink-300 rounded-full opacity-30 animate-ping     `}
+      ></div>
       <div className="absolute bottom-0 right-20 w-72 h-72  bg-pink-300 rounded-full opacity-20 "></div>
 
       {/* Card Section */}

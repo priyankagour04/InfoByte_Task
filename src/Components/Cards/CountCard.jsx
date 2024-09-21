@@ -8,13 +8,17 @@ const CountCard = () => {
           {/* First count section */}
           <div className="mb-6 md:mb-0">
             <h1 className="text-4xl font-bold">100+</h1>
-            <h1 className="text-text-text-light font-medium mt-2">Bookings Completed</h1>
+            <h1 className="text-text-text-light font-medium mt-2">
+              Bookings Completed
+            </h1>
           </div>
-          
+
           {/* Second count section */}
           <div>
             <h1 className="text-4xl font-bold">150+</h1>
-            <h1 className="text-text-text-light font-medium mt-2">Happy Customers</h1>
+            <h1 className="text-text-text-light font-medium mt-2">
+              Happy Customers
+            </h1>
           </div>
         </div>
       </div>

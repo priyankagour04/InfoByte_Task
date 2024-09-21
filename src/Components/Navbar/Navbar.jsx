@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import BookBtn from "../Button/BookBtn";
-import "../../style/Navbar.css"; // Import the CSS file for styles
+import "../../style/Navbar.css";
 
 const Navbar = ({ links = [], contactText }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -17,7 +17,9 @@ const Navbar = ({ links = [], contactText }) => {
   };
 
   return (
-    <nav className={`absolute top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out`}>
+    <nav
+      className={`absolute top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out`}
+    >
       <div className="lg:container lg:mx-auto px-4 py-5 flex justify-between items-center lg:bg-transparent bg-primary-500">
         {/* Logo Section */}
         <div className="ps-16 font-semibold text-lg text-white text-opacity-75">
@@ -29,7 +31,10 @@ const Navbar = ({ links = [], contactText }) => {
         <div className="hidden lg:flex flex-grow justify-center">
           <ul className="flex space-x-8 font-semibold ">
             {links.map((link, index) => (
-              <li key={index} className="text-lg text-white text-opacity-80 nav-item hover:cursor-pointer">
+              <li
+                key={index}
+                className="text-lg text-white text-opacity-80 nav-item hover:cursor-pointer"
+              >
                 <Link
                   activeClass="active"
                   to={link.name}
@@ -59,13 +64,23 @@ const Navbar = ({ links = [], contactText }) => {
               stroke="currentColor"
               className="w-6 h-6"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
             </svg>
           </button>
 
           {/* Booking Button (Desktop) */}
           <div className="hidden lg:block">
-            <Link to={contactText} spy={true} smooth={true} offset={-70} duration={500}>
+            <Link
+              to={contactText}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
               <BookBtn />
             </Link>
           </div>

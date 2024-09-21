@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import outimg from "../../assets/out.jpg";
 import BookBtn from "../Button/BookBtn";
-import "../../style/Aboutus.css"; // Add a custom CSS file for animations
+import "../../style/Aboutus.css";
 
 const Aboutus = () => {
   const [animate, setAnimate] = useState(false);

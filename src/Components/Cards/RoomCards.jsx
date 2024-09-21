@@ -34,14 +34,12 @@ const RoomCards = () => {
   return (
     <div
       className={`flex flex-col lg:flex-row lg:items-start lg:space-x-10 space-y-10 lg:space-y-0 ${
-          animate ? "animate-slide-in-left" : ""
-        }`}
+        animate ? "animate-slide-in-left" : ""
+      }`}
       ref={roomCardsRef} // Attach ref to the container
     >
       {/* Cozy Haven Room Card */}
-      <div
-        className="shadow-2xl rounded-md w-full lg:w-96 transition-transform transform hover:scale-105 hover:shadow-xl duration-300"
-      >
+      <div className="shadow-2xl rounded-md w-full lg:w-96 transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
         <div>
           <img
             src={roomOne}
