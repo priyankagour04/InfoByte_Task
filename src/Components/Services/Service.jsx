@@ -5,14 +5,14 @@ import {
   RiRestaurant2Fill,
 } from "react-icons/ri";
 import { MdOutlineMap } from "react-icons/md";
-import "../../style/ServiceCard.css";
+import "../../style/ServiceCard.css"; // Ensure this path is correct
 
 const Service = () => {
   const [animate, setAnimate] = useState(false);
-  const serviceRef = useRef(null); // Create a reference for the service section
+  const serviceRef = useRef(null);
 
   useEffect(() => {
-    // Function to handle intersection observer
+    // Intersection Observer to trigger animation when the section is in view
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -21,7 +21,7 @@ const Service = () => {
           observer.disconnect(); // Stop observing after animation starts
         }
       },
-      { threshold: 0.3 } // Adjust the threshold value as per your requirement
+      { threshold: 0.3 }
     );
 
     if (serviceRef.current) {
@@ -36,83 +36,82 @@ const Service = () => {
   }, []);
 
   return (
-    <>
-     <div className="">
-     <div className="mt-6 relative " ref={serviceRef}>
-        {/* Background Image for large screens */}
-        <div className="absolute w-full bg-Service-bg bg-cover bg-center  md:h-[calc(50vh-80px)] lg:h-[calc(119vh-150px)] px-4 sm:px-8 sm:block hidden"></div>
+    <div
+      className="relative flex justify-center items-center min-h-screen overflow-hidden bg-gradient-to-r mt-10"
+      ref={serviceRef}
+    >
+      {/* Background Shapes */}
+      <div className={`absolute top-0 left-16 w-60 h-60 bg-pink-300 rounded-full opacity-30 animate-ping     ` }></div>
+      <div className="absolute bottom-0 right-20 w-72 h-72  bg-pink-300 rounded-full opacity-20 "></div>
 
-        {/* Card Section */}
-        <div className="relative shadow-2xl bg-white w-full sm:w-4/5 md:w-4/6 lg:w-2/5 px-6 sm:px-16 py-10  sm:float-right sm:me-0 lg:me-20 z-10">
-          <h2 className="text-md lg:text-lg font-bold text-gray-700 mb-2 uppercase tracking-widest">
-            SERVICES
-          </h2>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Strive Only For The Best.
-          </h1>
+      {/* Card Section */}
+      <div className="relative z-10 bg-Service-bg shadow-2xl bg-cover w-full sm:w-4/5 md:w-4/6 px-6 sm:px-16 py-10 rounded-lg">
+        <h2 className="text-md lg:text-lg font-bold text-white mb-2 uppercase tracking-widest">
+          SERVICES
+        </h2>
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+          Strive Only For The Best.
+        </h1>
 
-          {/* Services List */}
-          <div className="text-lg sm:text-xl font-semibold">
-            {/* High Class Security */}
-            <div
-              className={`flex my-10 gap-5 staggered-item ${
-                animate ? "animate-slide-in-right staggered-item-1" : ""
-              }`}
-            >
-              <div className="bg-[#dbeafe] rounded-full p-2 flex justify-center items-center">
-                <RiShieldStarLine className="h-7 w-7" color="#60a5fa" />
-              </div>
-              <div>
-                <h1>High Class Security</h1>
-              </div>
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {/* High Class Security */}
+          <div
+            className={`relative flex flex-col items-center justify-center text-center p-6 shadow-lg rounded-lg bg-white staggered-item ${
+              animate ? "animate-slide-in-left staggered-item-1" : ""
+            }`}
+          >
+            {/* Left Side Primary Color Border */}
+            <div className="absolute top-0 left-0 h-full w-1 bg-primary-500 rounded-l-lg"></div>
+
+            {/* Card Content */}
+            <div className="bg-[#dbeafe]  rounded-full p-4 flex justify-center items-center mb-4">
+              <RiShieldStarLine className="h-8 w-8" color="#2986f9" />
             </div>
+            <h1 className="text-lg font-semibold">High Class Security</h1>
+          </div>
 
-            {/* 24 Hours Room Service */}
-            <div
-              className={`flex my-10 gap-5 staggered-item ${
-                animate ? "animate-slide-in-right staggered-item-2" : ""
-              }`}
-            >
-              <div className="bg-[#fce7f3] rounded-full p-2 flex justify-center items-center">
-                <Ri24HoursLine className="h-7 w-7" color="#f472b6" />
-              </div>
-              <div>
-                <h1>24 Hours Room Service</h1>
-              </div>
+          {/* 24 Hours Room Service */}
+          <div
+            className={`relative flex flex-col items-center justify-center text-center p-6 shadow-lg rounded-lg bg-white staggered-item ${
+              animate ? "animate-slide-in-left staggered-item-2" : ""
+            }`}
+          >
+            <div className="absolute top-0 left-0 h-full w-1 bg-primary-500 rounded-l-lg"></div>
+            <div className=" bg-[#fce7f3] rounded-full p-4 flex justify-center items-center mb-4">
+              <Ri24HoursLine className="h-8 w-8" color="#f472b6" />
             </div>
+            <h1 className="text-lg font-semibold">24 Hours Room Service</h1>
+          </div>
 
-            {/* Restaurant */}
-            <div
-              className={`flex my-10 gap-5 staggered-item ${
-                animate ? "animate-slide-in-right staggered-item-3" : ""
-              }`}
-            >
-              <div className="bg-[#f3e8ff] rounded-full p-2 flex justify-center items-center">
-                <RiRestaurant2Fill className="h-7 w-7" color="#c084fc" />
-              </div>
-              <div>
-                <h1>Restaurant</h1>
-              </div>
+          {/* Restaurant */}
+          <div
+            className={`relative flex flex-col items-center justify-center text-center p-6 shadow-lg rounded-lg bg-white staggered-item ${
+              animate ? "animate-slide-in-right staggered-item-3" : ""
+            }`}
+          >
+            <div className="absolute top-0 left-0 h-full w-1 bg-primary-500 rounded-l-lg"></div>
+            <div className="bg-[#f3e8ff] rounded-full p-4 flex justify-center items-center mb-4">
+              <RiRestaurant2Fill className="h-8 w-8" color="#c084fc" />
             </div>
+            <h1 className="text-lg font-semibold">Restaurant</h1>
+          </div>
 
-            {/* Tourist Guide Support */}
-            <div
-              className={`flex my-10 gap-5 staggered-item ${
-                animate ? "animate-slide-in-right staggered-item-4" : ""
-              }`}
-            >
-              <div className="bg-[#ffe4e6] rounded-full p-2 flex justify-center items-center">
-                <MdOutlineMap className="h-7 w-7" color="#fb7185" />
-              </div>
-              <div>
-                <h1>Tourist Guide Support</h1>
-              </div>
+          {/* Tourist Guide Support */}
+          <div
+            className={`relative flex flex-col items-center justify-center text-center p-6 shadow-lg rounded-lg bg-white staggered-item ${
+              animate ? "animate-slide-in-right staggered-item-4" : ""
+            }`}
+          >
+            <div className="absolute top-0 left-0 h-full w-1 bg-primary-500 rounded-l-lg"></div>
+            <div className=" bg-[#ffe4e6]  rounded-full p-4 flex justify-center items-center mb-4">
+              <MdOutlineMap className="h-8 w-8" color="#fb7185" />
             </div>
+            <h1 className="text-lg font-semibold">Tourist Guide Support</h1>
           </div>
         </div>
       </div>
-     </div>
-    </>
+    </div>
   );
 };
 

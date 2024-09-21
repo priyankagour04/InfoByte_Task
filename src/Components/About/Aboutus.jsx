@@ -34,7 +34,7 @@ const Aboutus = () => {
   return (
     <div
       ref={aboutUsRef} // Attach ref to this section
-      className="container mx-auto px-4 lg:px-10 py-10 lg:py-16 mt-10 lg:mt-16"
+      className="container mx-auto px-4 lg:px-10 py-10 lg:py-16 mt-10  lg:mt-24"
     >
       <div className="flex flex-col md:flex-row items-center md:items-start">
         {/* Left Image Section */}
@@ -46,7 +46,7 @@ const Aboutus = () => {
           <img
             src={outimg}
             alt="King Sukh Guest House"
-            className="w-full h-auto max-h-[300px] sm:max-h-[400px] lg:max-h-[600px] object-cover rounded-lg"
+            className="w-full h-auto max-h-[300px] sm:max-h-[400px]  md:max-h-[600px] lg:mt-0 mt-20 md:mt-20 object-cover rounded-lg"
           />
         </div>
 

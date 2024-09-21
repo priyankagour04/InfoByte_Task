@@ -29,7 +29,7 @@ const ContactForm = () => {
         <div className="relative flex flex-col lg:flex-row my-10 items-center me-16 container ">
           {/* Contact Info Section */}
           <div
-            className={`absolute sm:relative sm:z-0 sm:left-0 lg:z-10 lg:left-32 bg-primary-500 text-white p-8 md:p-10 lg:p-10 rounded-2xl lg:w-1/4 w-full lg:ml-16 lg:mr-8 mb-10 lg:mb-0 lg:translate-x-0 translate-x-0 shadow-xl ${
+            className={`absolute object-cover transform transition-transform duration-300 ease-in-out hover:scale-105  sm:relative sm:z-0 sm:left-0 lg:z-10 lg:left-32 bg-primary-500 text-white p-8 md:p-10 lg:p-10 rounded-2xl lg:w-1/4 w-full lg:ml-16 lg:mr-8 mb-10 lg:mb-0 lg:translate-x-0 translate-x-0 shadow-xl ${
               window.innerWidth <= 768 ? "hidden lg:block" : ""
             }`} // Hide contact info on small screens
           >

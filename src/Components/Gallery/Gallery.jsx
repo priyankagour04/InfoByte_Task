@@ -21,7 +21,7 @@ const Gallery = () => {
           <hr className="w-20 border-t-2 border-[#e82574]" />
         </div>
 
-        <div className="mt-8">
+        <div className="mt-8 ">
           {/* First Row */}
           <div className="flex flex-wrap">
             {/* Left Image (Takes full width on small screens and 1/4th on medium screens and above) */}
