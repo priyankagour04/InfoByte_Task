@@ -5,6 +5,7 @@ import ContactForm from "./Components/Contact/ContactForm";
 import Footer from "./Components/Footer/Footer";
 import Gallery from "./Components/Gallery/Gallery";
 import HomeScreen from "./Components/Home/HomeScreen";
+import Map from "./Components/Map/Map";
 import NavbarService from "./Components/Navbar/NavbarServices";
 import Room from "./Components/Room/Room";
 import Service from "./Components/Services/Service";
@@ -46,6 +47,9 @@ function App() {
       </Element>
       <Element name="Contact">
         <ContactForm />
+      </Element>
+      <Element name="Map">
+        <Map/>
       </Element>
       <Footer />
     </>
